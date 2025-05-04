@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="app-header">
+      <h1><i class="fas fa-cloud-sun"></i> Weather Forecast</h1>
+      <p class="subtitle">Get the latest weather updates and 5-day forecast</p>
+      <div class="search-container">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Search city..."
+          aria-label="City name"
+          autocomplete="off"
+        />
+        <button id="searchBtn" title="Search city"><i class="fas fa-search"></i> Search</button>
+        <button id="locationBtn" title="Use current location"><i class="fas fa-location-arrow"></i> My Location</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Current Weather Section -->
+      <section class="card weather-display" id="weatherDisplay">
+        <div class="welcome-message">
+          <h2>Welcome!</h2>
+          <p>Type a city or use your location to see the weather.</p>
+        </div>
+      </section>
+
+      <!-- 5-Day Forecast Section -->
+      <section class="card forecast-wrapper">
+        <h3 class="section-title"><i class="fas fa-calendar-day"></i> 5-Day Forecast</h3>
+        <div class="forecast-container" id="forecastContainer">
+          <!-- Dynamic forecast cards -->
+        </div>
+      </section>
+
+      <!-- Additional Info Section -->
+      <section class="card additional-info" id="additionalInfo">
+        <h3 class="section-title"><i class="fas fa-info-circle"></i> Additional Details</h3>
+        <!-- Extra weather stats -->
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Powered by <a href="https://openweathermap.org/" target="_blank" rel="noopener">OpenWeatherMap</a></p>
+      <p class="last-updated" id="lastUpdated"></p>
+    </footer>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
